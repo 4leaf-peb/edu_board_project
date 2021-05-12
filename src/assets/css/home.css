@@ -1,0 +1,28 @@
+.area1,
+.area3 {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  flex-direction: row;
+}
+
+.area1 div,
+.area3 div {
+  width: 50%;
+  height: 100%;
+}
+
+.area2 {
+  width: 100%;
+  height: 300px;
+  background-color: rgb(230, 230, 230);
+}
+
+.area1 div,
+.area3 div,
+.area2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
