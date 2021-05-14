@@ -17,3 +17,12 @@ block content
                 li 제목
                 li 작성자
                 li 작성일
+        each row in boardList
+             a(href=`/board/detail?pk=${row.no}`) 
+                 div.bl__dataArea.pc
+                    ul.bl__dataArea__list.pc
+                        li #{row.no}
+                        li #{row.title}
+                        li #{row.author}
+                        li #{row.created}
+                        li #{row.hit}

@@ -1,3 +1,8 @@
+a {
+  text-decoration: none;
+  color: #000;
+}
+
 .boradList {
   width: 100%;
   display: flex;
@@ -53,6 +58,10 @@
   justify-content: center;
 }
 
+.bl__dataArea:nth-child(2n) {
+  background-color: beige;
+}
+
 .bl__columnArea .bl__columnArea__list {
   display: flex;
   flex-direction: row;
@@ -64,7 +73,25 @@
   color: white;
 }
 
-.bl__columnArea .bl__columnArea__list li {
+.bl__dataArea .bl__dataArea__list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  width: 1250px;
+  height: 25px;
+  border-bottom: 1px solid #999;
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.bl__dataArea .bl__dataArea__list:hover {
+  background-color: rgb(230, 230, 230);
+}
+
+.bl__columnArea .bl__columnArea__list li,
+.bl__dataArea .bl__dataArea__list li {
   height: 100%;
 
   display: flex;
@@ -73,17 +100,22 @@
   justify-content: center;
 }
 
-.bl__columnArea .bl__columnArea__list li:nth-child(1) {
+.bl__columnArea .bl__columnArea__list li:nth-child(1),
+.bl__dataArea .bl__dataArea__list li:nth-child(1) {
   width: 60px;
 }
 
-.bl__columnArea .bl__columnArea__list li:nth-child(2) {
+.bl__columnArea .bl__columnArea__list li:nth-child(2),
+.bl__dataArea .bl__dataArea__list li:nth-child(2) {
   width: 890px;
 }
 
 .bl__columnArea .bl__columnArea__list li:nth-child(3),
 .bl__columnArea .bl__columnArea__list li:nth-child(4),
-.bl__columnArea .bl__columnArea__list li:nth-child(5) {
+.bl__columnArea .bl__columnArea__list li:nth-child(5),
+.bl__dataArea .bl__dataArea__list li:nth-child(3),
+.bl__dataArea .bl__dataArea__list li:nth-child(4),
+.bl__dataArea .bl__dataArea__list li:nth-child(5) {
   width: 100px;
 }
 
