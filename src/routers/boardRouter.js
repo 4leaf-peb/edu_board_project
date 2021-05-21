@@ -4,6 +4,7 @@ import {
   writeController,
   detailController,
   editController,
+  postDeleteController,
 } from "../controllers/boardController";
 import { dbConnectionHandler } from "../middleware/middleware";
 
@@ -13,5 +14,7 @@ boardRouter.get("/list", dbConnectionHandler, listController);
 boardRouter.get("/write", writeController);
 boardRouter.get("/edit", editController);
 boardRouter.get("/detail", dbConnectionHandler, detailController);
+
+boardRouter.post("/delete", dbConnectionHandler, postDeleteController);
 
 export default boardRouter;

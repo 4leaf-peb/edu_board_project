@@ -1,4 +1,24 @@
 extends  ../../layouts/base.pug
 
-block content  
-    h1 Hello, I'm Datail!
+block content
+    div.body
+        div.boardBody
+            div.list_no
+                h3.no #{board.no}
+                h3.title #{board.title}
+                div.author_hit
+                    h3.author #{board.author}
+                    h3.hit #{board.hit}
+                    h3.created #{board.created}
+            h3.contents #{board.contents}
+
+        div.button
+            div.update
+                form(action="#" method="post")  
+                    button  수정 
+            div.delete
+                form(action="/board/delete" method="post" )
+                    input(type="hidden" value=board.no name="pk") 
+                    button  삭제    
+//- // 제목, 내용 , 작성자, 작성일, 수정버튼 , 삭제버튼
+      
